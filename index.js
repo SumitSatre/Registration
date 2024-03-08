@@ -22,12 +22,10 @@ app.get("/", async (req, res, next) => {
 const registerUserController = require("./routes/signup.route");
 const loginUserController = require("./routes/login.route");
 const forgetPasswordController = require("./routes/forget_password.route");
-const resetPasswordController = require("./routes/reset_password.route");
 
 app.post('/register', registerUserController);
 app.post('/login', loginUserController);
 app.post('/forgot/password', forgetPasswordController);
-app.post('/reset/password', resetPasswordController);
 
 app.listen(PORT, () => {
     console.log("⚙️ Server is running on port: " + PORT);
